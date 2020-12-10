@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **username** | **str** |  | [optional] 
 **name** | **str** |  | 
 **project** | **str** |  | [optional] 
-**profile** | **str** |  | 
+**profile** | **str** |  | [optional] 
 **cluster** | **str** |  | [optional] 
 **start** | **str** |  | [optional] 
 **end** | **str** |  | [optional] 

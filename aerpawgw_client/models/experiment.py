@@ -68,7 +68,8 @@ class Experiment(object):
         self.name = name
         if project is not None:
             self.project = project
-        self.profile = profile
+        if profile is not None:
+            self.profile = profile
         if cluster is not None:
             self.cluster = cluster
         if start is not None:
@@ -163,8 +164,6 @@ class Experiment(object):
         :param profile: The profile of this Experiment.  # noqa: E501
         :type: str
         """
-        if profile is None:
-            raise ValueError("Invalid value for `profile`, must not be `None`")  # noqa: E501
 
         self._profile = profile
 
