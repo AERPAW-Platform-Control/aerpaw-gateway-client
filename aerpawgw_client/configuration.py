@@ -17,6 +17,7 @@ import logging
 import multiprocessing
 import sys
 import urllib3
+import os
 
 import six
 from six.moves import http_client as httplib
@@ -46,7 +47,10 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
     def __init__(self):
         """Constructor"""
         # Default Base url
-        self.host = "http://0.0.0.0:8080/aerpawgateway/1.0.0"
+        self.host = "http://{}:{}/aerpawgateway/{}".format(
+            os.getenv('AERPAWGW_HOST'),
+            os.getenv('AERPAWGW_PORT'),
+            os.getenv('AERPAWGW_VERSION'))
         # Temp file folder for downloading files
         self.temp_folder_path = None
 
