@@ -28,24 +28,10 @@ class TestUserApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_create_user(self):
-        """Test case for create_user
+    def test_adduser(self):
+        """Test case for adduser
 
-        create user on emulab testbed  # noqa: E501
-        """
-        pass
-
-    def test_delete_user(self):
-        """Test case for delete_user
-
-        delete user  # noqa: E501
-        """
-        pass
-
-    def test_get_user(self):
-        """Test case for get_user
-
-        get user information  # noqa: E501
+        add/update user and sshkey on experiment nodes  # noqa: E501
         """
         pass
 

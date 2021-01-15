@@ -117,9 +117,7 @@ Class | Method | HTTP request | Description
 *ReservationApi* | [**delete_reservation**](docs/ReservationApi.md#delete_reservation) | **DELETE** /reservation | delete reservation
 *ReservationApi* | [**get_reservation**](docs/ReservationApi.md#get_reservation) | **GET** /reservation | get reservation under user
 *ResourcesApi* | [**list_resources**](docs/ResourcesApi.md#list_resources) | **GET** /resources | list resources
-*UserApi* | [**create_user**](docs/UserApi.md#create_user) | **POST** /user | create user on emulab testbed
-*UserApi* | [**delete_user**](docs/UserApi.md#delete_user) | **DELETE** /user | delete user
-*UserApi* | [**get_user**](docs/UserApi.md#get_user) | **GET** /user | get user information
+*UserApi* | [**adduser**](docs/UserApi.md#adduser) | **POST** /user | add/update user and sshkey on experiment nodes
 *VersionApi* | [**get_version**](docs/VersionApi.md#get_version) | **GET** /version | API version
 
 ## Documentation For Models
@@ -130,7 +128,7 @@ Class | Method | HTTP request | Description
  - [Profile](docs/Profile.md)
  - [Reservation](docs/Reservation.md)
  - [Resource](docs/Resource.md)
- - [User](docs/User.md)
+ - [Userkey](docs/Userkey.md)
  - [Vnode](docs/Vnode.md)
 
 ## Documentation For Authorization

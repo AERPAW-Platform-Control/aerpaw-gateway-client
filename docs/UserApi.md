@@ -4,14 +4,12 @@ All URIs are relative to *http://0.0.0.0:8080/aerpawgateway/1.0.0*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_user**](UserApi.md#create_user) | **POST** /user | create user on emulab testbed
-[**delete_user**](UserApi.md#delete_user) | **DELETE** /user | delete user
-[**get_user**](UserApi.md#get_user) | **GET** /user | get user information
+[**adduser**](UserApi.md#adduser) | **POST** /user | add/update user and sshkey on experiment nodes
 
-# **create_user**
-> list[ApiResponse] create_user(body, username)
+# **adduser**
+> adduser(body, experiment, project=project)
 
-create user on emulab testbed
+add/update user and sshkey on experiment nodes
 
 ### Example
 ```python
@@ -23,68 +21,24 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = aerpawgw_client.UserApi()
-body = aerpawgw_client.User() # User | User Object
-username = 'username_example' # str | username for the request
+body = aerpawgw_client.Userkey() # Userkey | User Object
+experiment = 'experiment_example' # str | experiment for the request
+project = 'project_example' # str | project of the experiment (optional)
 
 try:
-    # create user on emulab testbed
-    api_response = api_instance.create_user(body, username)
-    pprint(api_response)
+    # add/update user and sshkey on experiment nodes
+    api_instance.adduser(body, experiment, project=project)
 except ApiException as e:
-    print("Exception when calling UserApi->create_user: %s\n" % e)
+    print("Exception when calling UserApi->adduser: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**User**](User.md)| User Object | 
- **username** | **str**| username for the request | 
-
-### Return type
-
-[**list[ApiResponse]**](ApiResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **delete_user**
-> delete_user(username)
-
-delete user
-
-### Example
-```python
-from __future__ import print_function
-import time
-import aerpawgw_client
-from aerpawgw_client.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = aerpawgw_client.UserApi()
-username = 'username_example' # str | username for the request
-
-try:
-    # delete user
-    api_instance.delete_user(username)
-except ApiException as e:
-    print("Exception when calling UserApi->delete_user: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **username** | **str**| username for the request | 
+ **body** | [**Userkey**](Userkey.md)| User Object | 
+ **experiment** | **str**| experiment for the request | 
+ **project** | **str**| project of the experiment | [optional] 
 
 ### Return type
 
@@ -96,56 +50,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_user**
-> list[Experiment] get_user(username)
-
-get user information
-
-get user information
-
-### Example
-```python
-from __future__ import print_function
-import time
-import aerpawgw_client
-from aerpawgw_client.rest import ApiException
-from pprint import pprint
-
-# create an instance of the API class
-api_instance = aerpawgw_client.UserApi()
-username = 'username_example' # str | username for the request
-
-try:
-    # get user information
-    api_response = api_instance.get_user(username)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling UserApi->get_user: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **username** | **str**| username for the request | 
-
-### Return type
-
-[**list[Experiment]**](Experiment.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

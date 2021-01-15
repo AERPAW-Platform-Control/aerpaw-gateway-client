@@ -31,5 +31,5 @@ from aerpawgw_client.models.node import Node
 from aerpawgw_client.models.profile import Profile
 from aerpawgw_client.models.reservation import Reservation
 from aerpawgw_client.models.resource import Resource
-from aerpawgw_client.models.user import User
+from aerpawgw_client.models.userkey import Userkey
 from aerpawgw_client.models.vnode import Vnode

@@ -15,12 +15,12 @@ from __future__ import absolute_import
 import unittest
 
 import aerpawgw_client
-from aerpawgw_client.models.user import User  # noqa: E501
+from aerpawgw_client.models.userkey import Userkey  # noqa: E501
 from aerpawgw_client.rest import ApiException
 
 
-class TestUser(unittest.TestCase):
-    """User unit test stubs"""
+class TestUserkey(unittest.TestCase):
+    """Userkey unit test stubs"""
 
     def setUp(self):
         pass
@@ -28,10 +28,10 @@ class TestUser(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testUser(self):
-        """Test User"""
+    def testUserkey(self):
+        """Test Userkey"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = aerpawgw_client.models.user.User()  # noqa: E501
+        # model = aerpawgw_client.models.userkey.Userkey()  # noqa: E501
         pass
 
 
