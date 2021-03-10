@@ -34,7 +34,8 @@ class Vnode(object):
         'hardware_type': 'str',
         'disk_image': 'str',
         'hostname': 'str',
-        'ipv4': 'str'
+        'ipv4': 'str',
+        'sshport': 'str'
     }
 
     attribute_map = {
@@ -44,10 +45,11 @@ class Vnode(object):
         'hardware_type': 'hardware_type',
         'disk_image': 'disk_image',
         'hostname': 'hostname',
-        'ipv4': 'ipv4'
+        'ipv4': 'ipv4',
+        'sshport': 'sshport'
     }
 
-    def __init__(self, name=None, node=None, type=None, hardware_type=None, disk_image=None, hostname=None, ipv4=None):  # noqa: E501
+    def __init__(self, name=None, node=None, type=None, hardware_type=None, disk_image=None, hostname=None, ipv4=None, sshport=None):  # noqa: E501
         """Vnode - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._node = None
@@ -56,6 +58,7 @@ class Vnode(object):
         self._disk_image = None
         self._hostname = None
         self._ipv4 = None
+        self._sshport = None
         self.discriminator = None
         if name is not None:
             self.name = name
@@ -71,6 +74,8 @@ class Vnode(object):
             self.hostname = hostname
         if ipv4 is not None:
             self.ipv4 = ipv4
+        if sshport is not None:
+            self.sshport = sshport
 
     @property
     def name(self):
@@ -218,6 +223,27 @@ class Vnode(object):
         """
 
         self._ipv4 = ipv4
+
+    @property
+    def sshport(self):
+        """Gets the sshport of this Vnode.  # noqa: E501
+
+
+        :return: The sshport of this Vnode.  # noqa: E501
+        :rtype: str
+        """
+        return self._sshport
+
+    @sshport.setter
+    def sshport(self, sshport):
+        """Sets the sshport of this Vnode.
+
+
+        :param sshport: The sshport of this Vnode.  # noqa: E501
+        :type: str
+        """
+
+        self._sshport = sshport
 
     def to_dict(self):
         """Returns the model properties as a dict"""
