@@ -35,6 +35,13 @@ class TestResourcesApi(unittest.TestCase):
         """
         pass
 
+    def test_parse_resources(self):
+        """Test case for parse_resources
+
+        Parse resources  # noqa: E501
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

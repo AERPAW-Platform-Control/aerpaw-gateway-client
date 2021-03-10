@@ -117,6 +117,7 @@ Class | Method | HTTP request | Description
 *ReservationApi* | [**delete_reservation**](docs/ReservationApi.md#delete_reservation) | **DELETE** /reservation | delete reservation
 *ReservationApi* | [**get_reservation**](docs/ReservationApi.md#get_reservation) | **GET** /reservation | get reservation under user
 *ResourcesApi* | [**list_resources**](docs/ResourcesApi.md#list_resources) | **GET** /resources | list resources
+*ResourcesApi* | [**parse_resources**](docs/ResourcesApi.md#parse_resources) | **POST** /resources/parse_script | Parse resources
 *UserApi* | [**adduser**](docs/UserApi.md#adduser) | **POST** /user | add/update user and sshkey on experiment nodes
 *VersionApi* | [**get_version**](docs/VersionApi.md#get_version) | **GET** /version | API version
 
